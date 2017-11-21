@@ -4,11 +4,16 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 
 ## Installation Notes
 ```
-npm install --save react react-dom
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env
+npm install --save react react-dom react-bootstrap
+npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env eslint eslint-config-airbnb webpack webpack-dev-server
 ```
 
 ### Configurations
+*.eslintrc*
+```
+
+```
+
 *.bablelrc*
 ```
 {
@@ -21,23 +26,22 @@ npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-e
 
 *webpack.config.js*
 ```
-var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, 'path/to/index.js'),
+  entry: 'path/to/index.js',
   output: {
-    path: path.resolve(__dirname, 'path/to/public/dir'),
+    path: path.resolve(__dirname, 'path/to/dist/dir'),
     filename: 'bundles.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['react', 'env']
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       }
-    }]
+    ]
   }
 }
 ```
@@ -46,4 +50,7 @@ module.exports = {
 ## References
 1. https://reactjs.org/docs/installation.html
 1. http://babeljs.io/docs/usage/babelrc/
+1. https://webpack.js.org/guides/installation/
+1. http://redux.js.org
 1. https://www.codementor.io/tamizhvendan/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack-du107r9zr
+1. https://github.com/h5bp/html5-boilerplate

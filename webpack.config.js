@@ -1,24 +1,18 @@
-var webpack = require('webpack');
-var path = require('path');
+const path = require('path');
 
-var BUILD_DIR = path.resolve(__dirname, 'app'); // build is public
-var APP_DIR = path.resolve(__dirname, 'src');
-
-var config = {
-  entry: APP_DIR + '/index.js',
+module.exports = {
+  entry: './index.js',
   output: {
-    path: BUILD_DIR,
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-      query: {
-        presets: ['react', 'env']
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       }
-    }]
+    ]
   }
 };
-
-module.exports = config;
