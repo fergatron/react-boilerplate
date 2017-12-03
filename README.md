@@ -54,3 +54,4 @@ module.exports = {
 1. http://redux.js.org
 1. https://www.codementor.io/tamizhvendan/beginner-guide-setup-reactjs-environment-npm-babel-6-webpack-du107r9zr
 1. https://github.com/h5bp/html5-boilerplate
+1. https://www.orbitmedia.com/blog/website-footer-design-best-practices/

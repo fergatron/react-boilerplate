@@ -6,6 +6,9 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
+  devServer: { // configuration for webpack-dev-server
+    contentBase: './dist'
+  },
   module: {
     rules: [
       {
