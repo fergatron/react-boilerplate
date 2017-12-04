@@ -5,7 +5,7 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 ## Installation Notes
 ```
 npm install --save react react-dom react-bootstrap
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb node-sass sass-loader style-loader webpack webpack-dev-server
+npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb file-loader node-sass sass-loader style-loader webpack webpack-dev-server
 ```
 
 ### Configurations
@@ -47,6 +47,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+        loader: 'file-loader'
       }
     ]
   }
@@ -63,3 +67,4 @@ module.exports = {
 1. https://github.com/h5bp/html5-boilerplate
 1. https://www.orbitmedia.com/blog/website-footer-design-best-practices/
 1. https://sass-guidelin.es/#the-7-1-pattern
+1. https://github.com/webpack-contrib/file-loader

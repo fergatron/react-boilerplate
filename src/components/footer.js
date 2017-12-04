@@ -30,7 +30,9 @@ const Footer = () => {
                 Sign-Up
               </Button>
             </Form>
-            <p>Social media icons</p>
+            <i className='fa fa-facebook fa-4x' aria-hidden='true'></i>
+            <i className='fa fa-google-plus fa-4x' aria-hidden='true'></i>
+            <i className='fa fa-twitter fa-4x' aria-hidden='true'></i>
           </Col>
           <Col xs={12} md={4}>
             <h3>Branding</h3>
@@ -49,7 +51,7 @@ const Footer = () => {
           <Col className='text-center' xs={12}>
             <hr />
             <address>
-              <strong>Brand Name </strong>
+              <strong>React Boilerplate </strong>
               123 Peachtree Street, Atlanta, GA 30319
             </address>
             { ' \u00b7 ' }

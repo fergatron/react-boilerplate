@@ -1,6 +1,10 @@
 // this pattern is based on 7-1.
 // https://sass-guidelin.es/#the-7-1-pattern
 
+// vendor styles
+@import './vendor/font-awesome/font-awesome';
+
+// core styles
 @import 'base/typography';
 
 @import 'layout/footer';
