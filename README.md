@@ -4,8 +4,8 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 
 ## Installation Notes
 ```
-npm install --save react react-dom react-bootstrap react-fontawesome react-router-dom
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb node-sass sass-loader style-loader webpack webpack-dev-server
+npm install --save react react-dom react-bootstrap react-router-dom
+npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
 ```
 
 ### Configurations
@@ -32,10 +32,12 @@ module.exports = {
   entry: 'path/to/index.js',
   output: {
     path: path.resolve(__dirname, 'path/to/dist/dir'),
-    filename: 'bundles.js'
+    filename: 'bundles.js',
+    publicPath: '/'
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -53,6 +55,9 @@ module.exports = {
 }
 ```
 
+## Dev Notes
+* **npm packages** installed, but aren't currently being used are: `react-fontawesome`, `classnames`, `eslint*`, `file-loader`, `url-loader`.
+* **react-router-dom** is a new package for react-router v4. Some things have changed. I also changed the `Header` component from using react-bootstrap to native bootstrap elements because I couldn't figure out how to use `Navbar` with `NavItem` and `Link` components. It rendered nested anchors.
 
 ## References
 1. https://reactjs.org/docs/installation.html
@@ -64,3 +69,4 @@ module.exports = {
 1. https://www.orbitmedia.com/blog/website-footer-design-best-practices/
 1. https://sass-guidelin.es/#the-7-1-pattern
 1. https://github.com/webpack-contrib/file-loader
+1. https://www.youtube.com/watch?v=VdyORTskPGA
