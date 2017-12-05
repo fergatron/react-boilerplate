@@ -4,7 +4,7 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 
 ## Installation Notes
 ```
-npm install --save react react-dom react-bootstrap react-fontawesome
+npm install --save react react-dom react-bootstrap react-fontawesome react-router-dom
 npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb node-sass sass-loader style-loader webpack webpack-dev-server
 ```
 

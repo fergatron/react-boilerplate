@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // bootstrap
 import MenuItem from 'react-bootstrap/lib/MenuItem';
@@ -18,7 +19,7 @@ const Header = () => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <NavItem eventKey={1} href="#">Link 1</NavItem>
+          <NavItem eventKey={1} href="/link1">Link 1</NavItem>
           <NavItem eventKey={2} href="#">Link 2</NavItem>
           <NavDropdown eventKey={3} title='Dropdown' id='nav-dropdown'>
             <MenuItem eventKey={3.1}>Action</MenuItem>
