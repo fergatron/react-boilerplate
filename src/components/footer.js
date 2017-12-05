@@ -13,6 +13,9 @@ import ListGroup from 'react-bootstrap/lib/ListGroup';
 import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
 import Row from 'react-bootstrap/lib/Row';
 
+// outside components
+import FontAwesome from 'react-fontawesome';
+
 const Footer = () => {
   return (
     <footer>
@@ -30,9 +33,11 @@ const Footer = () => {
                 Sign-Up
               </Button>
             </Form>
-            <i className='fa fa-facebook fa-4x' aria-hidden='true'></i>
-            <i className='fa fa-google-plus fa-4x' aria-hidden='true'></i>
-            <i className='fa fa-twitter fa-4x' aria-hidden='true'></i>
+            <Row>
+              <Col xs={12}>
+                <FontAwesome name='facebook' size='2x' />
+              </Col>
+            </Row>
           </Col>
           <Col xs={12} md={4}>
             <h3>Branding</h3>
