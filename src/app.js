@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
 
 // bootstrap
 import Col from 'react-bootstrap/lib/Col';
@@ -7,6 +6,7 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 
 // components
+import Content from './content';
 import Footer from './components/footer';
 import Header from './components/header';
 
