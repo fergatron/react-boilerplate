@@ -4,7 +4,7 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 
 ## Installation Notes
 ```
-npm install --save react react-dom react-bootstrap react-router-dom
+npm install --save react react-dom react-bootstrap react-router-dom react-router-bootstrap
 npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
 ```
 
@@ -58,6 +58,7 @@ module.exports = {
 ## Dev Notes
 * **npm packages** installed, but aren't currently being used are: `react-fontawesome`, `classnames`, `eslint*`, `file-loader`, `url-loader`.
 * **react-router-dom** is a new package for react-router v4. Some things have changed. I also changed the `Header` component from using react-bootstrap to native bootstrap elements because I couldn't figure out how to use `Navbar` with `NavItem` and `Link` components. It rendered nested anchors.
+* **react-router-bootstrap** is an intermittent solution to using bootstrap's `NavItem` with router's `Link` component. It rendered a nested anchor tag. One solution is to manipulate the browser's history object through `onclick` event or [use an additional package][router-bootstrap].
 
 ## References
 1. https://reactjs.org/docs/installation.html
@@ -70,3 +71,5 @@ module.exports = {
 1. https://sass-guidelin.es/#the-7-1-pattern
 1. https://github.com/webpack-contrib/file-loader
 1. https://www.youtube.com/watch?v=VdyORTskPGA
+
+[router-bootstrap]:https://github.com/ReactTraining/react-router/issues/83#issuecomment-214794477
