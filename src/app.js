@@ -13,6 +13,7 @@ import Header from './components/header';
 // pages
 import Home from './pages/home';
 import Link1 from './pages/link1';
+import Link2 from './pages/link2';
 
 import './stylesheets/main.scss';
 
@@ -26,6 +27,7 @@ export default class App extends Component {
             <Switch>
               <Route path='/' component={Home} exact />
               <Route path='/link1' component={Link1} />
+              <Route path='/link2' component={Link2} />
             </Switch>
           </Col>
         </Row>
