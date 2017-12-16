@@ -5,13 +5,25 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 ## Installation Notes
 ```
 npm install --save react react-dom react-bootstrap react-router-dom react-router-bootstrap
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-config-airbnb file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
+npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
 ```
 
 ### Configurations
 *.eslintrc*
+By default [ESLint expects ECMAScript5 syntax][eslint-config]. This can be changed by adding `parserOptions`. Also ES6 global variables is managed through `env`.
 ```
-
+{
+  "env": { "es6": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parserOptions": {
+    "emcaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [ "react" ]
+}
 ```
 
 *.bablelrc*
@@ -73,3 +85,4 @@ module.exports = {
 1. https://www.youtube.com/watch?v=VdyORTskPGA
 
 [router-bootstrap]:https://github.com/ReactTraining/react-router/issues/83#issuecomment-214794477
+[eslint-config]: https://eslint.org/docs/user-guide/configuring

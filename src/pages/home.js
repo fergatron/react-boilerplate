@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Button, Jumbotron, PageHeader } from 'react-bootstrap';
 
-export default () => {
+const Home = () => {
   return (
     <div>
       <PageHeader>Home Page</PageHeader>
@@ -17,3 +17,5 @@ export default () => {
     </div>
   );
 }
+
+export default Home;

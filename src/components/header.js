@@ -10,11 +10,11 @@ import NavDropdown from 'react-bootstrap/lib/NavDropdown';
 import NavItem from 'react-bootstrap/lib/NavItem';
 
 const Header = () => {
-  return(
+  return (
     <Navbar collapseOnSelect>
       <Navbar.Header>
         <Navbar.Brand>
-          <Link to='/' exact>React Boilerplate</Link>
+          <Link to='/'>React Boilerplate</Link>
         </Navbar.Brand>
         <Navbar.Toggle />
       </Navbar.Header>
