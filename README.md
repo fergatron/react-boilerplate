@@ -3,12 +3,22 @@
 This package is a simple home-grown boilerplate to handle my React.Js projects. Creating a React application using modern JavaScript tools is basically broken down into a couple sections: react, redux, babel, and webpack.
 
 ## Installation Notes
-```
-npm install --save react react-dom react-bootstrap react-router-dom react-router-bootstrap
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
+```bash
+npm install --save react react-dom react-router-dom
+npm install --save-dev css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader
 ```
 
-### Configurations
+### Babel
+```bash
+npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env
+```
+
+### Webpack
+```bash
+npm install --save-dev webpack webpack-cli webpack-dev-server
+```
+
+## Configurations
 *.eslintrc*
 By default [ESLint expects ECMAScript5 syntax][eslint-config]. This can be changed by adding `parserOptions`. Also ES6 global variables is managed through `env`.
 ```
