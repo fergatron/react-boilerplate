@@ -5,7 +5,7 @@ This package is a simple home-grown boilerplate to handle my React.Js projects. 
 ## Installation Notes
 ```
 npm install --save react react-dom react-bootstrap react-router-dom react-router-bootstrap
-npm install --save-dev babel-core babel-loader babel-preset-react babel-preset-env classnames css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader url-loader webpack webpack-dev-server
+npm install --save-dev babel-core babel-loader babel-preset-react classnames css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader url-loader webpack webpack-cli webpack-dev-server
 ```
 
 ### Configurations
@@ -30,8 +30,7 @@ By default [ESLint expects ECMAScript5 syntax][eslint-config]. This can be chang
 ```
 {
   "presets": [
-    "react",
-    "env"
+    "react"
   ]
 }
 ```
@@ -44,7 +43,7 @@ module.exports = {
   entry: 'path/to/index.js',
   output: {
     path: path.resolve(__dirname, 'path/to/dist/dir'),
-    filename: 'bundles.js',
+    filename: 'bundle.js',
     publicPath: '/'
   },
   devServer: {
