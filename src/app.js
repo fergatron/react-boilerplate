@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 // components
 // import Footer from './components/footer';
-// import Header from './components/header';
+import Header from './components/header';
 
 // pages
 import Home from './pages/home';
@@ -31,7 +31,7 @@ function renderRouterSwitch() {
 const App = () => {
   return (
     <Fragment>
-      {/* <Header /> */}
+      <Header />
       { renderRouterSwitch() }
       {/* <Footer /> */}
     </Fragment>
