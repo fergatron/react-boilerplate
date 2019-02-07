@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
+import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-// bootstrap
-import Col from 'react-bootstrap/lib/Col';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-
 // components
-import Footer from './components/footer';
-import Header from './components/header';
+// import Footer from './components/footer';
+// import Header from './components/header';
 
 // pages
 import Home from './pages/home';
@@ -17,31 +12,30 @@ import Link2 from './pages/link2';
 
 import './stylesheets/main.scss';
 
-export default class App extends Component {
-
-  renderRouterSwitch() {
-    return (
-      <Grid>
-        <Row>
-          <Col xs={12}>
-            <Switch>
-              <Route path='/' component={Home} exact />
-              <Route path='/link1' component={Link1} />
-              <Route path='/link2' component={Link2} />
-            </Switch>
-          </Col>
-        </Row>
-      </Grid>
-    );
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-        { this.renderRouterSwitch() }
-        <Footer />
+function renderRouterSwitch() {
+  return (
+    <div className="container">
+      <div className="row">
+        <div className="col">
+          <Switch>
+            <Route path='/' component={Home} exact />
+            <Route path='/link1' component={Link1} />
+            <Route path='/link2' component={Link2} />
+          </Switch>
+        </div>
       </div>
-    )
-  }
+    </div>
+  );
 }
+
+const App = () => {
+  return (
+    <Fragment>
+      {/* <Header /> */}
+      { renderRouterSwitch() }
+      {/* <Footer /> */}
+    </Fragment>
+  );
+}
+
+export default App;

@@ -1,11 +1,11 @@
 # react-boilerplate
 
-This package is a simple home-grown boilerplate to handle my React.Js projects. Creating a React application using modern JavaScript tools is basically broken down into a couple sections: react, redux, babel, and webpack.
+This package is a simple home-grown boilerplate to handle my React.Js projects. Creating a React application using modern JavaScript tools is basically broken down into a couple utilities: react, redux, babel, and webpack.
 
 ## Installation Notes
 ```bash
-npm install --save react react-dom react-bootstrap react-router-dom react-router-bootstrap
-npm install --save-dev babel-core babel-loader babel-preset-react classnames css-loader eslint eslint-plugin-react file-loader node-sass sass-loader style-loader url-loader webpack webpack-cli webpack-dev-server
+npm install --save react react-dom react-router-dom
+npm install --save-dev @babel/core babel-loader @babel/preset-react classnames css-loader eslint node-sass sass-loader style-loader webpack webpack-cli webpack-dev-server
 ```
 
 ## Configurations
